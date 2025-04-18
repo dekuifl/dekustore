@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deku Store</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: center;
+      padding: 2rem;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    .produk {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+    }
+    .produk h2 {
+      margin-top: 0;
+      font-size: 1.8rem;
+      border-bottom: 2px solid #fff;
+      padding-bottom: 0.5rem;
+    }
+    .produk ul {
+      list-style: none;
+      padding: 0;
+    }
+    .produk li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .produk li:last-child {
+      border-bottom: none;
+    }
+    .produk .nama {
+      font-weight: bold;
+    }
+    .produk .harga {
+      margin-right: 1rem;
+    }
+    .produk .beli {
+      background-color: #00ffcc;
+      color: #000;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .produk .beli:hover {
+      background-color: #00ccaa;
+    }
+    .pembayaran {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+    }
+    .pembayaran h2 {
+      margin-top: 0;
+      font-size: 1.8rem;
+      border-bottom: 2px solid #fff;
+      padding-bottom: 0.5rem;
+    }
+    .pembayaran .metode {
+      display: flex;
+      align-items: center;
+      margin: 1rem 0;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .pembayaran .metode span {
+      margin-left: 1rem;
+      background-color: cyan;
+      color: black;
+      padding: 0.3rem 0.6rem;
+      border-radius: 5px;
+      cursor: pointer;
+      user-select: none;
+    }
+    .pembayaran .metode span:hover {
+      background-color: #ddd;
+    }
+    .pembayaran .metode span:active {
+      transform: scale(0.95);
+    }
+    .pembayaran .metode span.copy {
+      display: inline-block;
+      margin-left: 1rem;
+      background-color: #ffdd57;
+      color: black;
+      padding: 0.3rem 0.6rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .pembayaran .metode span.copy:hover {
+      background-color: #1e62b4;
+    }
+    .qr-code {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .qr-code img {
+      width: 200px;
+      height: 200px;
+    }
+        /* QRIS Button */
+        .qris-button {
+            background: #00e676;
+            color: white;
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        .qris-button:hover {
+            background: #00c853;
+        }
+        .qris-button {
+            background: #ffdd57;
+            color: black;
+            font-weight: bold;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: rgba(0, 0, 0, 0.3);
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Deku Store</h1>
+    <p>Solusi terbaik untuk kebutuhan digital Anda</p>
+  </header>
+
+  <section class="produk">
+    <h2>Panel Pterodactyl Privat</h2>
+    <ul>
+      <li><span class="nama">3 GB</span><span class="harga">Rp4.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20membeli%203GB%20Panel%20Pterodactyl" class="beli">Beli Sekarang</a></li>
+      <li><span class="nama">4 GB</span><span class="harga">Rp5.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20membeli%204GB%20Panel%20Pterodactyl" class="beli">Beli Sekarang</a></li>
+      <li><span class="nama">6 GB</span><span class="harga">Rp7.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20membeli%206GB%20Panel%20Pterodactyl" class="beli">Beli Sekarang</a></li>
+      <li><span class="nama">7 GB</span><span class="harga">Rp8.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20membeli%207GB%20Panel%20Pterodactyl" class="beli">Beli Sekarang</a></li>
+      <li><span class="nama">10 GB</span><span class="harga">Rp9.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20membeli%2010GB%20Panel%20Pterodactyl" class="beli">Beli Sekarang</a></li>
+      <li><span class="nama">Unlimited</span><span class="harga">Rp10.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20membeli%20Unlimited%20Panel%20Pterodactyl"class="beli">Beli Sekarang</a></li>
+      <li><span class="nama">Reseller Panel Privat 1Bulan</span><span class="harga">Rp10.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20menjadi%20Reseller%20Panel%20Pivat%201Bulan" class="beli">Beli Sekarang</a></li>
+      <li><span class="nama">Reseller Panel Privat Permanen</span><span class="harga">Rp15.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20menjadi%20Reseller%20Panel%20Pivat%20Permanen" class="beli">Beli Sekarang</a></li>
+    </ul>
+  </section>
+
+  <section class="produk">
+    <h2>Ress/Admin Panel Pterodactyl</h2>
+    <ul>
+    <li><span class="nama">Reseller Panel Privat 1Bulan</span><span class="harga">Rp10.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20menjadi%20Reseller%20Panel%20Pivat%201Bulan" class="beli">Beli Sekarang</a></li>
+    <li><span class="nama">Reseller Panel Privat Permanen</span><span class="harga">Rp15.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20menjadi%20Reseller%20Panel%20Pivat%20Permanen" class="beli">Beli Sekarang</a></li>
+    <li><span class="nama">Admin Panel 1Bulan</span><span class="harga">Rp20.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20menjadi%20Admin%20Panel%20Pterodactyl%201Bulan" class="beli">Beli Sekarang</a></li>
+    <li><span class="nama">Admin Panel Permanen</span><span class="harga">Rp25.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20menjadi%20Admin%20Panel%20Pterodactyl%20Permanen" class="beli">Beli Sekarang</a></li>
+    </ul>
+  </section>
+    
+    <section class="produk">
+    <h2>Murbug Tredict Invictus</h2>
+    <ul>
+      <li><span class="nama">1 Minggu</span><span class="harga">Rp20.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20membeli%201minggu%20Murbuk%20Tredict" class="beli">Beli Sekarang</a></li>
+      <li><span class="nama">1 Bulan</span><span class="harga">Rp40.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20membeli%201bulan%20Murbuk%20Tredict" class="beli">Beli Sekarang</a></li>
+      <li><span class="nama">Perma Free Up</span><span class="harga">Rp60.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20membeli%20No%20Up%20Perma%20Murbuk%20Tredict" class="beli">Beli Sekarang</a></li>
+    </ul>
+  </section>
+  
+    <section class="produk">
+    <h2>Jasa Bug</h2>
+    <ul>
+    <li><span class="nama">Jasbug 1 Nomor [ Android ]</span><span class="harga">Rp5.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20Order%20Jasa%20Bug%201Nomor%20Android%20Only" class="beli">Beli Sekarang</a></li>
+    <li><span class="nama">Jasbug 3 Nomor [ Android ]</span><span class="harga">Rp12.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20Order%20Jasa%20Bug%203Nomor%20Android%20Only" class="beli">Beli Sekarang</a></li>
+    <li><span class="nama">Jasbug 5 Nomor [ Android ]</span><span class="harga">Rp5.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20Order%20Jasa%20Bug%205Nomor%20Android%20Only" class="beli">Beli Sekarang</a></li>
+    <li><span class="nama">Jasbug 1 Nomor [ Iphone ]</span><span class="harga">Rp8.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20Order%20Jasa%20Bug%201Nomor%20Iphone%20Only" class="beli">Beli Sekarang</a></li>
+    <li><span class="nama">Jasbug 3 Nomor [ Iphone ]</span><span class="harga">Rp20.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20Order%20Jasa%20Bug%203Nomor%20Iphone%20Only" class="beli">Beli Sekarang</a></li>
+    </ul>
+  </section>
+
+  <section class="produk">
+    <h2>Script Bug WhatsApp & Telegram</h2>
+    <ul>
+      <li><span class="nama">Tredict Invictus V2.0</span><span class="harga">Rp80.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20membeli%20Script%20Tredict%20V2.0" class="beli">Beli Sekarang</a></li>
+      <li><span class="nama">Tredict V2.0 Free Update</span><span class="harga">Rp100.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20membeli%20Script%20Tredict%20V2.0%20Free%20Update" class="beli">Beli Sekarang</a></li>
+      <li><span class="nama">Tredict V2.0 Free Update Perma</span><span class="harga">Rp150.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20membeli%20Script%20Tredicti%20V2.0%20Free%20Update%20Permanen" class="beli">Beli Sekarang</a></li>
+      <li><span class="nama">Reseller Script Tredict Invictus</span><span class="harga">Rp180.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20menjadi%20Reseller%20Script%20Tredict" class="beli">Beli Sekarang</a></li>
+      <li><span class="nama">Vigora Sytic V3</span><span class="harga">Rp25.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20membeli%20Script%20Vigora%20Sytic" class="beli">Beli Sekarang</a></li>
+    </ul>
+  </section>
+
+  <section class="produk">
+    <h2>Nokos WhatsApp All Negara</h2>
+    <ul>
+      <li><span class="nama">Nokos Indonesia Fresh</span><span class="harga">Rp8.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20membeli%20Nokos%20Indonesia%20No%20Save" class="beli">Beli Sekarang</a></li>
+      <li><span class="nama">Nokos Indonesi Done Save</span><span class="harga">Rp10.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20membeli%20Nokos%20Indonesia%20Done%20Save" class="beli">Beli Sekarang</a></li>
+      <li><span class="nama">Nokos Philipines Fresh</span><span class="harga">Rp10.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20membeli%20Nokos%20Philipines%20No%20Save" class="beli">Beli Sekarang</a></li>
+      <li><span class="nama">Nokos Philipines Done Save</span><span class="harga">Rp12.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20membeli%20Nokos%20Philipines%20Done%20Save" class="beli">Beli Sekarang</a></li>
+      <li><span class="nama">Nokos Malaysia Fresh</span><span class="harga">Rp12.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20membeli%20Nokos%20Malaysia%20No%20Save" class="beli">Beli Sekarang</a></li>
+      <li><span class="nama">Nokos Malaysia Done Save</span><span class="harga">Rp15.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20membeli%20Nokos%20Malaysia%20Done%20Save" class="beli">Beli Sekarang</a></li>
+    </ul>
+  </section>
+
+  <section class="produk">
+    <h2>Sewa Bot Bug/Pushkontak/Jagagrup</h2>
+    <ul>
+      <li><span class="nama">Sc Bug Tredict 3Days</span><span class="harga">Rp15.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20Sewa%20Script%20bug%20Tredict%20selama%203hari" class="beli">Beli Sekarang</a></li>
+      <li><span class="nama">Sc Bug Tredict 7Days</span><span class="harga">Rp30.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20Sewa%20Script%20bug%20Tredict%20selama%207hari" class="beli">Beli Sekarang</a></li>
+      <li><span class="nama">Sc Bug Tredict 1Months</span><span class="harga">Rp50.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20Sewa%20Script%20bug%20Tredict%20selama%201Bulan" class="beli">Beli Sekarang</a></li>
+      <li><span class="nama">Sc Bug Tredict Permanen</span><span class="harga">Rp60.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20Sewa%20Script%20bug%20Tredict%20Permanen" class="beli">Beli Sekarang</a></li>
+      <li><span class="nama">Sc Push Kontak 3Days</span><span class="harga">Rp10.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20Sewa%20Script%20Push%20Kontak%20Selama%203Hari" class="beli">Beli Sekarang</a></li>
+      <li><span class="nama">Sc Push Kontak 7Days</span><span class="harga">Rp25.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20Sewa%20Script%20Push%20Kontak%20Selama%207Hari" class="beli">Beli Sekarang</a></li>
+      <li><span class="nama">Sc Push Kontak 1Months</span><span class="harga">Rp45.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20Sewa%20Script%20Push%20Kontak%20Selama%201Bulan" class="beli">Beli Sekarang</a></li>
+      <li><span class="nama">Sc Push Kontak Permanen</span><span class="harga">Rp50.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20Sewa%20Script%20Push%20Kontak%20Permanen" class="beli">Beli Sekarang</a></li>
+      <li><span class="nama">Sc Jaga Grup 7Days</span><span class="harga">Rp15.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20Sewa%20Script%20Jaga%20Grup%20Selama%207Hari" class="beli">Beli Sekarang</a></li>
+      <li><span class="nama">Sc Jaga Grup 1Months</span><span class="harga">Rp35.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20Sewa%20Script%20Jaga%20Grup%20Selama%201Bulan" class="beli">Beli Sekarang</a></li>
+      <li><span class="nama">Sc Jaga Grup Permanen</span><span class="harga">Rp40.000</span><a href="https://wa.me/6285863540439?text=Saya%20ingin%20Sewa%20Script%20Jaga%20Grup%20Permanen" class="beli">Beli Sekarang</a></li>
+    </ul>
+  </section>
+
+    <div class="metode">
+      <img src="https://files.catbox.moe/0rg2rd.jpg" alt="DANA" width="50">
+      <span class="copy" onclick="copyToClipboard('0895403920320')">0895403920320</span>
+    </div>
+    <div class="metode">
+      <img src="https://files.catbox.moe/r393p1.jpg" alt="GoPay" width="50">
+      <span class="copy" onclick="copyToClipboard('085863540439')">085863540439</span>
+    </div>
+
+  <h2>Metode Qris</h2>
+  <div class="metode">
+    <button class="qris-button" onclick="openQRIS()">Lihat QRIS</button>
+</div>
+  </section>
+  
+<script>
+    function copyToClipboard(id) {
+        let text = document.getElementById(id).innerText;
+        let input = document.createElement("input");
+        document.body.appendChild(input);
+        input.value = text;
+        input.select();
+        document.execCommand("copy");
+        document.body.removeChild(input);
+
+        // Mainkan suara gelembung
+        document.getElementById('bubbleSound').play();
+
+        alert("Nomor berhasil disalin: " + text);
+    }
+
+    function openQRIS() {
+        // Ganti dengan link gambar QRIS Anda
+        let qrisLink = "https://files.catbox.moe/3xqxc2.jpg"; 
+        window.open(qrisLink, "_blank");
+    }
+</script>
+
+  <footer>
+    <p>&copy; 2025 Deku Store - All rights reserved</p>
+  </footer>
+
+</body>
+</html>
